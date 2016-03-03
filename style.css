@@ -4,8 +4,9 @@ body {
 }
 
 #header {
-	width: 80%;
 	margin: auto;
+	margin-top: 20px;
+	overflow: hidden; /* just in case...otherwise header will think its height is 0 */
 }
 
 #left-header {
@@ -36,4 +37,40 @@ body {
 
 img {
 	width: 100%;
+}
+
+#game-wrapper {
+	clear: both;
+	overflow: hidden; /* tiles now pass up their dimensions to game-wrapper */
+}
+
+.tile {
+	float: left;
+	width: 25%;
+	/* height: 30%; */
+	padding: 11%;
+	box-sizing: border-box;
+	position: relative; /* need this to establish a reference point for daughter elements */
+	border: 5px solid #fff;
+}
+
+.tile-back, .tile-front {
+	position: absolute;
+	/* puts the top-left corner of back and front in the top-left corner of each tile */
+	top: 0;
+	left: 0; /* just to make sure it's in the right place */
+	width: 100%;
+	height: 100%;
+}
+
+.tile-back {
+	background: url("img/default/logo-bw.png") 50% 50% no-repeat;
+	/* combines background-image, background-position, and background-repeat */
+	/* positions the image in the middle of the div */
+	background-color: #dcdee1;
+}
+ 
+.tile-front {
+	display: none;
+	/* we don't want the front image to display until we click on the tile */
 }
