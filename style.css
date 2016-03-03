@@ -11,6 +11,7 @@ body {
 
 #left-header {
 	float: left;
+	margin-left: 10px;
 }
 
 .header-text {
@@ -26,6 +27,7 @@ body {
 }
 
 #right-header button {
+	margin-right: 10px;
 	padding: 10px;
 	background-color: #ff3c50;
 	color: #fff;
@@ -47,8 +49,8 @@ img {
 .tile {
 	float: left;
 	width: 25%;
-	/* height: 30%; */
-	padding: 11%;
+	height: 25vh;
+	padding: 5px;
 	box-sizing: border-box;
 	position: relative; /* need this to establish a reference point for daughter elements */
 	border: 5px solid #fff;
@@ -64,6 +66,7 @@ img {
 }
 
 .tile-back {
+	display: block;
 	background: url("img/default/logo-bw.png") 50% 50% no-repeat;
 	/* combines background-image, background-position, and background-repeat */
 	/* positions the image in the middle of the div */
@@ -73,4 +76,8 @@ img {
 .tile-front {
 	display: none;
 	/* we don't want the front image to display until we click on the tile */
+}
+
+#footer {
+	background-color: #28aadc;
 }
