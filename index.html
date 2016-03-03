@@ -27,7 +27,7 @@
         		</div>
         	</div>
         	<div id="right-header">
-        		<button>Start Over
+        		<button onclick="restart();">Start Over
         		</button>
     		</div>
         </div>
@@ -107,9 +107,24 @@
         </div>
         <script type="text/javascript">
             function flip(element) {
-                console.dir(element);
-                element.children[0].style.display = "none";
-                element.children[1].style.display = "block";
+                if (element.children[0].style.display == 'block') {
+                    element.children[0].style.display = 'none';
+                    element.children[1].style.display = 'block';
+                } else {
+                    element.children[0].style.display = 'block';
+                    element.children[1].style.display = 'none';
+                }
+            }
+            function restart() {
+                var back = document.getElementsByClassName('tile-back');
+                for (i = 0; i < back.length; i++) {
+                    back[i].style.display = 'block';
+                }
+                var front = document.getElementsByClassName('tile-front');
+                for (i = 0; i < front.length; i++) {
+                    front[i].style.display = 'none';
+                }
+                console.log(back, front);
             }
         </script>
     </body>
