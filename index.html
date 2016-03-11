@@ -1,25 +1,10 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Memory Game</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        
-        <div id="header">
+ <div id="header">
         	<div id="left-header">
         		<div class="header-text">Level: 1
         		</div>
@@ -27,91 +12,107 @@
         		</div>
         	</div>
         	<div id="right-header">
-        		<button>Start Over
+        		<button onclick="restart();">Start Over
         		</button>
     		</div>
         </div>
         <div id="game-wrapper">
 			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
+        		<div class="inside-tile unmatched" onclick="flip(this);">
         			<div class="tile-back">
-        				<img src="">
         			</div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-01.png">
+                    </div>
         		</div>
         	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
-			<div class="tile">
-        		<div class="inside-tile">
-        			<div class="tile-front">
-        				<img src="img/default/monsters-01.png">
-        			</div>
-        			<div class="tile-back">
-        				<img src="">
-        			</div>
-        		</div>
-        	</div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-02.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-03.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-04.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-05.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-06.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-07.png">
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                <div class="inside-tile unmatched" onclick="flip(this);">
+                    <div class="tile-back">
+                    </div>
+                    <div class="tile-front">
+                        <img src="img/default/monsters-08.png">
+                    </div>
+                </div>
+            </div>
         </div>
+        <div id="footer">
+        </div>
+        <script type="text/javascript">
+            function flip(element) {
+                if (element.children[0].style.display === 'block' || element.children[0].style.display === '') {
+                    element.children[0].style.display = 'none';
+                    element.children[1].style.display = 'block';
+                } else {
+                    element.children[0].style.display = 'block';
+                    element.children[1].style.display = 'none';
+                }
+            }
+            function restart() {
+                var back = document.getElementsByClassName('tile-back');
+                for (i = 0; i < back.length; i++) {
+                    back[i].style.display = 'block';
+                }
+                var front = document.getElementsByClassName('tile-front');
+                for (i = 0; i < front.length; i++) {
+                    front[i].style.display = 'none';
+                }
+                console.log(back, front);
+            }
+        </script>
     </body>
 </html>
